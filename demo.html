@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Hình Ảnh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .section9 {
+            height: 956px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .content9 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            width: 70%;
+            overflow: hidden;
+        }
+        .cot1 {
+            grid-area: 1/1/3/2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .cot2 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .anh91, .anh92, .anh94, .anh95, .anh93 {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="section9">
+        <div class="content9">
+            <div class="cot1">
+                <div class="anh91">
+                    <img src="anh91.png" alt="">
+                </div>
+                <div class="anh92">
+                    <img src="anh92.png" alt="">
+                </div>
+            </div>
+            <div class="anh93">
+                <img src="anh93.png" alt="">
+            </div>
+            <div class="cot2">
+                <div class="anh94">
+                    <img src="anh94.png" alt="">
+                </div>
+                <div class="anh95">
+                    <img src="anh95.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
