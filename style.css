@@ -692,7 +692,7 @@ ul li::before{
   height: 110%;
 }
 .parallax {
-  background-image: url('./anh/bg3.jpg'); /* Đường dẫn ảnh của bạn */
+  background-image: url('./images/bg3.jpg'); /* Đường dẫn ảnh của bạn */
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
