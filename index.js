@@ -99,12 +99,7 @@ menuItems.forEach(item => {
         }
     });
 });
-// const play=document.querySelector(".play")
-// const iconplay=document.querySelector(".fa-solid fa-play")
-// play.addEventListener("mouseenter",function(){
-//     iconplay.style.color="white"
 
-// })
 document.addEventListener("DOMContentLoaded", function () {
     const menuItems = document.querySelectorAll(".p2 div"); // Chọn tất cả mục menu
     const sections = {
@@ -217,20 +212,49 @@ const select = h15_2.querySelector("select");
         this.style.color = ""; // Trả về màu mặc định
     });
 });
-const sections = document.querySelectorAll(".section8_2_1, .section8_2_2, .section8_2_3");
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".section8_2 > div");
 
     sections.forEach(section => {
         section.addEventListener("click", function () {
-            // Ẩn tất cả nội dung trước khi mở cái mới
-            sections.forEach(sec => sec.classList.remove("active"));
-            
-            // Hiển thị nội dung của phần tử được click
-            this.classList.add("active");
+            if (this.classList.contains("active")) {
+                this.classList.remove("active"); // Nếu đang active, bỏ active
+            } else {
+                sections.forEach(sec => sec.classList.remove("active")); // Ẩn tất cả trước
+                this.classList.add("active"); // Bật active cho phần được click
+            }
         });
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const img = document.querySelector(".section5_1 img");
 
+    function checkScroll() {
+        if (!img) return; // Tránh lỗi nếu ảnh chưa tải
 
+        const rect = img.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (rect.top < windowHeight * 0.75) {
+            img.classList.add("show");
+            window.removeEventListener("scroll", checkScroll);
+        }
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    checkScroll();
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".section6_1, .section6_2, .section6_3");
+
+    sections.forEach(section => {
+        section.addEventListener("click", function () {
+            // Xóa class active khỏi tất cả các phần tử khác
+            sections.forEach(el => el.classList.remove("active"));
+            
+            // Thêm class active vào phần tử được nhấp
+            this.classList.add("active");
+        });
+    });
+});
