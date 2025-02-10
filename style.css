@@ -42,7 +42,7 @@ header {
 }
 header nav {
   width: 100%;
-  height: 70px;
+  height: 85px;
   margin: 1rem 12.5%;
   display: flex;
   justify-content: space-between;
@@ -98,6 +98,7 @@ nav .navbar-toggler {
 
 .nav_left--item li {
   list-style: none;
+  color:#071e55;
 }
 .nav_left--item a:hover {
   transition: all 0.2s ease;
@@ -640,14 +641,14 @@ body {
   color:#7c87a3;
   font-size: 18px;
 }
-ul li{
+.section5 ul li{
   line-height: 1.5;
   font-size: 18px;
   list-style:none ;
   color:#7c87a3;
   margin-left:-7%;
 }
-ul li::before{
+.section5 ul li::before{
   content:"\f00c";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -1735,7 +1736,8 @@ ul li::before{
     }
     .section3 {
       width: 100%;
-      height:200px;
+      min-height:200px;
+      height: auto;
       background-color: white;
     }
     .contentsec3 {
